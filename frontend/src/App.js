@@ -8,10 +8,8 @@ import Header from "./components/Header";
 import CartScreen from "./screens/CartScreen";
 import Homescreen from "./screens/Homescreen";
 import Productdetails from "./screens/ProductDetails";
-// import LoginScreen from "./screens/LoginScreen";
-// import RegisterScreen from "./screens/RegisterScreen";
-import Login from "./components/auth/Login";
-import Register from "./components/auth/Register"
+import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
@@ -22,12 +20,6 @@ import GetHiredManScreen from "./screens/GetHiredManScreen";
 import TermsandConditionScreen from "./screens/TermsandConditionScreen";
 import Home from "./screens/Home";
 import RequestDetails from "./screens/RequestDetails";
-import {useDispatch, useSelector} from 'react-redux'
-import {dispatchLogin, fetchUser, dispatchGetUser} from './actions/authAction'
-// import auth from "./components/auth"
-import ActivationEmail from './components/auth/ActivationEmail';
-import ForgotPassword from './components/auth/ForgotPassword';
-import ResetPassword from './components/auth/ResetPassword';
 
 function App() {
 
@@ -45,17 +37,14 @@ function App() {
           <Route path="/gethired" component={TermsandConditionScreen} exact />
           <Route path="/fillform" component={GetHiredManScreen} exact />
           <Route path="/cart/:id?" component={CartScreen} exact />
-          <Route path="/login" component={Login} exact />
-          <Route path="/register" component={Register} exact />
+          <Route path="/login" component={LoginScreen} exact />
+          <Route path="/register" component={RegisterScreen} exact />
           <Route path="/profile" component={ProfileScreen} exact />
           <Route path="/shipping" component={ShippingScreen} exact />
           <Route path="/payment" component={PaymentScreen} exact />
           <Route path="/placeorder" component={PlaceOrderScreen} exact />
           <Route path="/order/:id" component={OrderScreen} exact />
           <Route path="/details" component={RequestDetails} exact />
-          <Route path="/activationEmail" component={ActivationEmail} exact />
-          <Route path="/forgotPassword" component={ ForgotPassword} exact />
-          <Route path="/resetPassword" component={ResetPassword} exact />
           
         </Container>
       </main>
