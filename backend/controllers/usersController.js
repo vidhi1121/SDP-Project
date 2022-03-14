@@ -1,10 +1,28 @@
 const User = require("../models/UserModel");
 const asyncHandler = require("express-async-handler");
 const generateToken = require("../utils/generateToken");
+const nodemailer = require('nodemailer')
+const sendgridTransport = require('nodemailer-sendgrid-transport')
+
+const transporter = nodemailer.createTransport(sendgridTransport({
+  auth:{
+      api_key:"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"
+  }
+}))
+
 
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   const userExist = await User.findOne({ email });
+  user.save()
+            .then(user=>{
+  transporter.sendMail({
+        to:user.email,
+         from:"no-reply@veggies.com",
+       subject:"signup success",
+       html:"<h1>welcome to veggies</h1>"
+     })
+    })
   if (userExist) {
     res.status(400);
     throw new Error("User Already Exists!");

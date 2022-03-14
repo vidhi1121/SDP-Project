@@ -10,6 +10,9 @@ const {
 const router = express.Router();
 const { protect } = require("../middlewares/authMiddleware");
 
+// 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
+
+
 //user registration
 router.route("/").post(registerUser);
 
