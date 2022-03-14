@@ -35,7 +35,9 @@ const RegisterScreen = ({ location, history }) => {
       dispatch(register(name, email, password));
     }
   };
-
+function signup() {
+  alert ('registered successfully');
+}
   return (
     <>
       <FormContainer>
@@ -80,7 +82,7 @@ const RegisterScreen = ({ location, history }) => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
-          <Button type="submit" varient="primary">
+          <Button onClick={signup} type="submit" varient="primary">
             SIGN UP
           </Button>
         </Form>

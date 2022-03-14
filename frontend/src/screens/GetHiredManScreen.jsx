@@ -219,9 +219,9 @@ const GetHiredManScreen = ({ location, history }) => {
   <Button variant="primary" type="submit" >
     Submit
   </Button>
-  <Button variant="primary" type="submit" onClick={checkout} >
+  {/* <Button variant="primary" type="submit" onClick={checkout} >
     All Request Details
-  </Button>
+  </Button> */}
 </Form>
         </div>
   )
