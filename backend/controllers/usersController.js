@@ -14,15 +14,15 @@ const transporter = nodemailer.createTransport(sendgridTransport({
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
   const userExist = await User.findOne({ email });
-  user.save()
-            .then(user=>{
-  transporter.sendMail({
-        to:user.email,
-         from:"no-reply@veggies.com",
-       subject:"signup success",
-       html:"<h1>welcome to veggies</h1>"
-     })
-    })
+  // user.save()
+  //           .then(user=>{
+  // transporter.sendMail({
+  //       to:user.email,
+  //        from:"no-reply@veggies.com",
+  //      subject:"signup success",
+  //      html:"<h1>welcome to veggies</h1>"
+  //    })
+  //   })
   if (userExist) {
     res.status(400);
     throw new Error("User Already Exists!");
