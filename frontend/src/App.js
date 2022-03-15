@@ -20,6 +20,7 @@ import GetHiredManScreen from "./screens/GetHiredManScreen";
 import TermsandConditionScreen from "./screens/TermsandConditionScreen";
 import Home from "./screens/Home";
 import RequestDetails from "./screens/RequestDetails";
+import faqs from "./screens/faqs";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen} exact />
           <Route path="/order/:id" component={OrderScreen} exact />
           <Route path="/details" component={RequestDetails} exact />
+          <Route path="/faqs" component={faqs} exact />
           
         </Container>
       </main>

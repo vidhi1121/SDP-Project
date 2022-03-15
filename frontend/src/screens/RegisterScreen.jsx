@@ -81,6 +81,9 @@ function signup() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             ></Form.Control>
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
           </Form.Group>
           <Button onClick={signup} type="submit" varient="primary">
             SIGN UP
