@@ -1,4 +1,3 @@
-import ACTIONS from './index'  //new
 import axios from "axios";
 import swal from "sweetalert";
 import { ORDER_LIST_MY_RESET } from "../constants/orderConstants";
@@ -195,20 +194,3 @@ export const deleteUser = (userid) => async (dispatch) => {
     swal("Error While Deleting User");
   }
 };
-
-
-//new
-
-export const fetchAllUsers = async (token) => {
-  const res = await axios.get('/user/all_infor', {
-      headers: {Authorization: token}
-  })
-  return res
-}
-
-export const dispatchGetAllUsers = (res) => {
-  return {
-      type: ACTIONS.GET_ALL_USERS,
-      payload: res.data
-  }
-}
