@@ -23,6 +23,7 @@ import RequestDetails from "./screens/RequestDetails";
 import faqs from "./screens/faqs";
 import ForgotPassword from './screens/ForgotPassword';
 import ResetPassword from './screens/ResetPassword'
+import UpdatePassword from './screens/UpdatePassword';
 
 
 function App() {

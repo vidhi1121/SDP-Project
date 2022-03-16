@@ -1,14 +1,15 @@
 import React, { Fragment, useState, useEffect } from "react";
-import "./UpdatePassword.css";
-import Loader from "../layout/Loader/Loader";
+// import "./UpdatePassword.css";
+import Loader from "../components/shared/Loader";
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, updatePassword } from "../actions/userAction";
+import { updatePassword } from "../actions/userAction";
 import { useAlert } from "react-alert";
 import { UPDATE_PASSWORD_RESET } from "../constants/userConstants";
-import MetaData from "../layout/MetaData";
+import MetaData from "../components/shared/MetaData";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import LockIcon from "@material-ui/icons/Lock";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
+import FormContainer from "../components/shared/FromContainer";
 
 const UpdatePassword = ({ history }) => {
   const dispatch = useDispatch();
@@ -33,10 +34,10 @@ const UpdatePassword = ({ history }) => {
   };
 
   useEffect(() => {
-    if (error) {
-      alert.error(error);
-      dispatch(clearErrors());
-    }
+    // if (error) {
+    //   alert.error(error);
+    //   dispatch(clearErrors());
+    // }
 
     if (isUpdated) {
       alert.success("Profile Updated Successfully");
