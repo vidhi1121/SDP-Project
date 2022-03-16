@@ -1,6 +1,8 @@
 const express = require("express");
 const { errorHandler } = require("./middlewares/errorMiddleware");
 require("colors");
+const cookieParser = require("cookie-parser");
+const bodyParser = require("body-parser");
 const products = require("./data/products");
 const dotenv = require("dotenv");
 const connectDb = require("./config/config");
@@ -19,6 +21,8 @@ connectDb();
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));

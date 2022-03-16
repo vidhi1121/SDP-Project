@@ -15,7 +15,17 @@ import {
   USER_DETAILS_RESET,
   USER_ALL_DETAILS_FAIL,
   USER_ALL_DETAILS_REQUEST,
-  USER_ALL_DETAILS_SUCCESS,
+  USER_ALL_DETAILS_SUCCESS, FORGOT_PASSWORD_REQUEST,
+  FORGOT_PASSWORD_SUCCESS,
+  FORGOT_PASSWORD_FAIL,
+  RESET_PASSWORD_REQUEST,
+  RESET_PASSWORD_SUCCESS,
+  RESET_PASSWORD_FAIL,
+  UPDATE_PASSWORD_REQUEST,
+  UPDATE_PASSWORD_SUCCESS,
+  UPDATE_PASSWORD_RESET,
+  UPDATE_PASSWORD_FAIL,
+
 } from "../constants/userConstants";
 
 export const userLoginReducer = (state = {}, action) => {
@@ -84,6 +94,26 @@ export const getAllUsersReducer = (state = { users: [] }, action) => {
     case USER_ALL_DETAILS_FAIL:
       return { loading: false, error: action.payload };
 
+    default:
+      return state;
+  }
+};
+
+export const forgotPasswordReducer = (state = {}, action) => {
+  switch (action.type) {
+    case FORGOT_PASSWORD_REQUEST:
+    case RESET_PASSWORD_REQUEST:
+      return { ...state, loading: true };
+    case FORGOT_PASSWORD_SUCCESS:
+      return { loading: false, user: action.payload };
+
+      case RESET_PASSWORD_SUCCESS:
+        return { loading: false, user: action.payload };
+
+    case FORGOT_PASSWORD_FAIL:
+    case RESET_PASSWORD_FAIL:
+      return { loading: false, error: action.payload };
+      
     default:
       return state;
   }

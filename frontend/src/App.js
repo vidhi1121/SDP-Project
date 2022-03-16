@@ -21,6 +21,9 @@ import TermsandConditionScreen from "./screens/TermsandConditionScreen";
 import Home from "./screens/Home";
 import RequestDetails from "./screens/RequestDetails";
 import faqs from "./screens/faqs";
+import ForgotPassword from './screens/ForgotPassword';
+import ResetPassword from './screens/ResetPassword'
+
 
 function App() {
 
@@ -47,6 +50,8 @@ function App() {
           <Route path="/order/:id" component={OrderScreen} exact />
           <Route path="/details" component={RequestDetails} exact />
           <Route path="/faqs" component={faqs} exact />
+          <Route exact path="/password/forgot" component={ForgotPassword} />
+          <Route exact path="/password/reset/:token" component={ResetPassword} />
           
         </Container>
       </main>
