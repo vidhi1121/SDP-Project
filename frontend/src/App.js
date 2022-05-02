@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
@@ -21,9 +20,7 @@ import TermsandConditionScreen from "./screens/TermsandConditionScreen";
 import Home from "./screens/Home";
 import RequestDetails from "./screens/RequestDetails";
 import faqs from "./screens/faqs";
-import ForgotPassword from './screens/ForgotPassword';
-import ResetPassword from './screens/ResetPassword'
-import UpdatePassword from './screens/UpdatePassword';
+import ContactComponent from './components/ContactComponent';
 
 
 function App() {
@@ -44,6 +41,7 @@ function App() {
           <Route path="/cart/:id?" component={CartScreen} exact />
           <Route path="/login" component={LoginScreen} exact />
           <Route path="/register" component={RegisterScreen} exact />
+          <Route path="/contactus" component={ContactComponent} exact />
           <Route path="/profile" component={ProfileScreen} exact />
           <Route path="/shipping" component={ShippingScreen} exact />
           <Route path="/payment" component={PaymentScreen} exact />
@@ -51,8 +49,6 @@ function App() {
           <Route path="/order/:id" component={OrderScreen} exact />
           <Route path="/details" component={RequestDetails} exact />
           <Route path="/faqs" component={faqs} exact />
-          <Route exact path="/password/forgot" component={ForgotPassword} />
-          <Route exact path="/password/reset/:token" component={ResetPassword} />
           
         </Container>
       </main>

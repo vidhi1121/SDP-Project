@@ -12,8 +12,8 @@ const AddNewVeggies = () => {
     const [image,setimage] = useState('')
     const [description,setdescription] = useState('')
     const [countInStock,setcountinstock] = useState()
-    const [rating,setrating] = useState()
-    const [numreviews,setnumreviews] =useState()
+    const [rating] = useState()
+    const [numreviews] =useState()
 
 const addProductState = useSelector(state => state.addproductReducer)
 const {loading,error,success}=addProductState;
@@ -84,15 +84,6 @@ const {loading,error,success}=addProductState;
     <Form.Label>Stock</Form.Label>
     <Form.Control type="text" value={countInStock} onChange={(e) => setcountinstock(e.target.value)} placeholder="Enter Stock" />
   </Form.Group>
-
-  {/* <Form.Group className="mb-3" controlId="formGridAddress2">
-    <Form.Label>Rating</Form.Label>
-    <Form.Control type="text" value={rating} onChange={(e) => setrating(e.target.value)}  />
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formGridAddress2">
-    <Form.Label>numReviews</Form.Label>
-    <Form.Control type="text" value={numreviews} onChange={(e) => setnumreviews(e.target.value)}  />
-  </Form.Group> */}
 
   </Row>
 

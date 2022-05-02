@@ -53,20 +53,24 @@ const Header = () => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i>
+                    {/* <i className="fas fa-user"></i> */}
                     &nbsp; login
                   </Nav.Link>
                 </LinkContainer>
               )}
 
               <Nav.Link href="/cart">
-                <i class="fa-solid fa-cart-shopping"></i>
+                {/* <i class="fa-solid fa-cart-shopping"></i> */}
                 &nbsp; Cart
               </Nav.Link>
 
               <Nav.Link href="/gethired">
                 {/* <i class="fa-regular fa-person-dolly-empty"></i> */}
                 getHired
+              </Nav.Link>
+              <Nav.Link href="/contactus">
+                {/* <i class="fa-regular fa-person-dolly-empty"></i> */}
+                contact us
               </Nav.Link>
             </Nav>
             <Form className="d-flex">

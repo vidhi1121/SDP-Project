@@ -84,9 +84,7 @@ const Productdetails = ({history, match}) => {
                 <ListGroupItem>
                     Price : ₹{product.price}
                 </ListGroupItem>
-                <ListGroupItem>
-                    {product.description}
-                </ListGroupItem>
+                
               </ListGroup>
           </Col>
           <Col md={3}>
@@ -121,6 +119,20 @@ const Productdetails = ({history, match}) => {
                   </ListGroupItem>
               {/* </ListGroupItem> */}
           </Col>
+      </Row>
+      <Row>
+        <Col>
+        <ListGroupItem>
+                    {product.description}
+                    <p></p>
+                    <p>You have to buy the minimum Rs.200 of vegetables.
+                      <br/> Price of vegetables mentioned here is per KGs.
+                    <br/>Here 1 kg = 1 qty.</p>
+                    <h4>Offers</h4>
+                    <p>You will get 5% discount everytime when your order is greater then 1000 
+                    <br/> Up to 7.5% Cashback with HDFC Bank Credit Cards. </p>
+                </ListGroupItem>
+        </Col>
       </Row>
       <Row>
           <Col md={6}>

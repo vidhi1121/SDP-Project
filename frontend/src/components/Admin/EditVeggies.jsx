@@ -16,10 +16,10 @@ const EditVeggies = ({match}) => {
 
     const dispatch=useDispatch()
     const getProductByState = useSelector(state => state.getproductByIdReducer)
-    const {loading,error,product} =getProductByState;
+    const {error,product} =getProductByState;
 
     const updatePrductState = useSelector(state => state.updateproductByIdReducer)
-    const {updateloading,updatesuccess,updateerror} = updatePrductState
+    const {updateloading} = updatePrductState
 
     useEffect(() => {
 
@@ -60,9 +60,7 @@ const EditVeggies = ({match}) => {
             updateloading && (<Loader/>)
         }
          { error && <Message variant="danger">Add new veggies error</Message>}
-        {/* {error && (<Message variant="danger" error = "add new veggies error"/>)} 
-     {success && (<Message variant="success" success="veggies edit successfully"/>)} */}
-        {/* {success && <Message variant="success">Veggies Added successfully</Message>} */}
+
        
     <Form onSubmit={submitForm} className="bg-light p-4">
   <Row className="mb-3">
@@ -77,18 +75,6 @@ const EditVeggies = ({match}) => {
       <Form.Control type="text" value={price} onChange={(e) => setprice(e.target.value)} placeholder="Enter Price" />
     </Form.Group>
 
-    {/* <Form.Group as={Col} controlId="formGridState">
-      <Form.Label>State</Form.Label>
-      <Form.Select defaultValue="Choose...">
-        <option>Choose...</option>
-        <option>...</option>
-      </Form.Select>
-    </Form.Group>
-
-    <Form.Group as={Col} controlId="formGridZip">
-      <Form.Label>Zip</Form.Label>
-      <Form.Control />
-    </Form.Group> */}
   </Row>
     <Form.Group as={Col} controlId="formGridPassword">
       <Form.Label>Image</Form.Label>
@@ -107,15 +93,6 @@ const EditVeggies = ({match}) => {
     <Form.Label>Stock</Form.Label>
     <Form.Control type="text" value={countinstock} onChange={(e) => setcountinstock(e.target.value)} placeholder="Enter Stock" />
   </Form.Group>
-
-  {/* <Form.Group className="mb-3" controlId="formGridAddress2">
-    <Form.Label>Rating</Form.Label>
-    <Form.Control type="text" value={rating} onChange={(e) => setrating(e.target.value)}  />
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formGridAddress2">
-    <Form.Label>numReviews</Form.Label>
-    <Form.Control type="text" value={numreviews} onChange={(e) => setnumreviews(e.target.value)}  />
-  </Form.Group> */}
 
   </Row>
 

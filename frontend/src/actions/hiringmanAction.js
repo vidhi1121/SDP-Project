@@ -37,12 +37,6 @@ export const submitForm =
   async (dispatch) => {
     try {
       dispatch({ type: HIRINGMAN_FORM_REQUEST });
-      //   const config = { headers: { "Contnet-Type": "application/json" } };
-      //   const { data } = await axios.post(
-      //     "http://localhost:8080/api/hireman",
-      //     { name, email, password },
-      //     config
-      //   );
 
       const { data } = await axios.post("http://localhost:8080/api/hireman", {
         // user: user._id,
@@ -114,14 +108,7 @@ export const approveRequest = (manid) => async (dispatch, getState) => {
     dispatch({
       type: ACCEPT_HIRING_MAN_REQUEST,
     });
-    // const {
-    //   userLogin: { userInfo },
-    // } = getState();
-    // const config = {
-    //   headers: {
-    //     Authorization: `Bearer ${userInfo.token}`,
-    //   },
-    // };
+    
     const { data } = await axios.post(
       "http://localhost:8080/api/hireman/approverequest",
 

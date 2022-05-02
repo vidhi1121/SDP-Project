@@ -17,7 +17,18 @@ const FAQS = () => {
 Ans. The candidate should have completed 10th or Below 10th degree and people
  who are freshers are eligible to apply for this job. 
     </p>
-        
+    <h4>
+      3.How can i apply?
+    </h4>
+    <p>
+      Ans. You can apply through our website you just have to fill the form in the get hired section.
+    </p>
+    <h4>
+      4.What are the eligibility criteria?
+    </h4>
+        <p>
+          Ans. You must have 18+ and have your own bike.
+          </p>
         
         </div>
   )

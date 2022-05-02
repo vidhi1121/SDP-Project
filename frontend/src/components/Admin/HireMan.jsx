@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import { Button, Table } from 'react-bootstrap'
 import { AiFillDelete } from 'react-icons/ai'
-//import { AiFillDelete } from 'react-icons/ai'
 import { useDispatch,useSelector } from 'react-redux'
 import { approveRequest, deleteMan, getallMen } from '../../actions/hiringmanAction'
 import Loader from '../shared/Loader'

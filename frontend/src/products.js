@@ -43,7 +43,8 @@ const products = [
     _id: "5",
     name: "Onion",
     image: "/images/Onions.jpeg",
-    description: "fresh",
+    description: 
+    "The beauty of an Onion is that it can go just about anywhere. Cut it into thin slices to top off your favourite burger or hot dog, or chop it into little cubes to bring out the sweetness in curry dishes. Chopped Onions are perfect for fish dishes, quiche, stews and chili. Onions can be roasted whole until tender and then chopped, or caramelized by slowly cooking them in butter for a delicious treat for a delicious treat. They are also delicious when dipped in batter and deep-fried! So, go ahead, buy online now!",
     price: 50.5,
     countInStock: 20,
     rating: 4,

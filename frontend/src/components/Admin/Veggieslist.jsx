@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 // import axios from 'axios'
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct, listProducts } from "../../actions/productActions";
-import {Row,Col,Container,Table} from "react-bootstrap";
+import {Table} from "react-bootstrap";
 import Loader from '../../components/shared/Loader';
 import Message from '../../components/shared/Message';
-import Productscreen from '../../screens/Productscreen';
 import {AiFillEdit,AiFillDelete} from 'react-icons/ai'
 import { Link } from "react-router-dom";
 
@@ -26,13 +25,7 @@ const Veggieslist = () => {
         //   <h2>{error}</h2>
         <Message variant="danger">{error}</Message>
       ) : (
-        // <Row>
-        //   {products.map((product) => (
-        //     <Col key={product._id} md={3}>
-        //       <Productscreen product={product} />
-        //     </Col>
-        //   ))}
-        // </Row>
+
 
         <div>
             <Table striped bordered hover>

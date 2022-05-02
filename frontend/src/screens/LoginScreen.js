@@ -55,7 +55,6 @@ const LoginScreen = ({ location, history }) => {
               onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
-          <Link to="/password/forgot">Forget Password ?</Link>
           <Button type="submit" varient="primary">
             SING IN
           </Button>

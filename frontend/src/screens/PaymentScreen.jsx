@@ -9,6 +9,10 @@ const PaymentScreen = ({ history }) => {
   if (!shippingAddress.address) {
     history.push("/shipping");
   }
+
+  const cod = () => {
+    history.push("/codscreen");
+  };
   const dispatch = useDispatch();
   const [paymentMethod, setPaymentMethod] = useState("paypal");
   const submitHandler = (e) => {
@@ -31,13 +35,15 @@ const PaymentScreen = ({ history }) => {
               name="paymentMethod"
               value="paypal"
               onChange={(e) => setPaymentMethod(e.target.value)}
+              required
             ></Form.Check>
              <Form.Check
               type="radio"
-              label="Debit Card"
-              id="Debit"
+              label="Cash On Delivery"
+              onClick={cod}
+              id="COD"
               name="paymentMethod"
-              value="Debit"
+              value="COD"
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>
           </Col>
