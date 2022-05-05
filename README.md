@@ -1,1 +1,1 @@
-# veggies-mern-stact
+# veggies-mern-stack
